@@ -22,14 +22,17 @@ def ask_action():
 def ask_adjetive():
    return input("Escribe un adjetivo ")
 
+def ask_user(thing):
+   return input("Escribe un " + thing + " " )
+
 #definir una función que haga una oración
 def build_phrase(subject, verb, adjetive):
     return print("El / La " + subject + " " + verb + " " + adjetive)
 
 def play():
-   subject = ask_subject()
-   verb = ask_action()
-   adjetive = ask_adjetive()
+   subject = ask_user("sujeto")
+   verb = ask_user("verbo")
+   adjetive = ask_user("adjetivo")
    build_phrase(subject, verb, adjetive)
    
 play()
